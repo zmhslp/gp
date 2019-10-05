@@ -17,3 +17,37 @@ public class NewBehaviourScript : MonoBehaviour
         transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime,0f, moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
     }
 }
+
+
+Obj
+
+
+var tHits int 0;
+static var score : int =0;
+function On Collision Enter (col Collision)
+{
+if(col.gameObject.name "bullet(Clone)" )
+{
+Destroy (all.gameobject, 2);
+tHits++;
+}
+}
+function Update(){
+Destroy(gameobject);
+score = score++;
+}
+}
+
+
+Guitext
+
+var scoreShow;
+function Start () {
+GetComponent (GUIText).text = " ";
+}
+function Update(){
+if (hitTarget2.score > 0){
+scoreShow = hitTarget2.score.ToString();
+GetComponent(GUIText).text = scoreShow;
+}
+}
